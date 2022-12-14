@@ -1,0 +1,39 @@
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right:5%;
+    font-family: "IBM Plex Sans",
+        -"apple-system",
+       " BlinkMacSystemFont",
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";;
+}
+
+.navbar_left{
+    display: flex;
+    grid-template-columns: repeat(7, 1fr);
+        align-items: center;
+        justify-content: space-between;
+        gap: 10%;
+}
+
+.navbar_right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10%;
+}
+Navlink{
+text-decoration: none;
+
+}
+
+
