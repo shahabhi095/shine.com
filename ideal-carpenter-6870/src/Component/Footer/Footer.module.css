@@ -1,0 +1,11 @@
+.Footer_Parrents Link{
+    list-style-type: none;
+    padding-left: 0;
+    color: #000ff0;
+    text-decoration: none;
+}
+
+.Footer_Parrents{
+    width: "90%";
+     margin:"auto";
+}
