@@ -1,8 +1,9 @@
 import React from "react";
-import { Container2 } from "./Containt_home";
+import { Container2,SubscriptionAutomation,BillingExperiments,RevenueIntelligence,ExtensiblePlatform,EnterpriseGradeSecurity } from "./Containt_home";
 import { Grid, GridItem,Box,Image,Heading ,Container } from '@chakra-ui/react'
 import  styles  from "./Home.module.css";
-
+  import { FaArrowRight} from "@react-icons/all-files/fa/FaArrowRight";
+import { TestiMonials } from "./Containt_home";
 
 const Home = ()=>{
     return <div>
@@ -22,7 +23,7 @@ const Home = ()=>{
             <Box w='100%' > <Image src={el.Image} alt={el.h1} /></Box>
             <Heading w='100%' size='sm' as='h4'  pl={10} pr={10}  ><Box color="#232323">{el.h1}</Box></Heading>
             <Container color="#64648c" w='100%' pl={10}  pr={10}  ><Container h={70}>{el.p}</Container></Container>
-            <Container textAlign="right" paddingRight={10}><Container w='100%'  pl={10} pr={10} color="#000ff0">Learn More</Container></Container>
+            <Container textAlign="right" paddingRight={10}><Container w='100%'  pl={10} pr={10} color="#000ff0">Learn More{" "}<FaArrowRight fontWeight="100" size={13} style={{transform:"rotate(-45deg)"}} /></Container></Container>
             </Box> </GridItem>)}
             </Grid>         
         </div>
@@ -34,6 +35,15 @@ const Home = ()=>{
             <Box>Chargebee automates the lead-to-ledger workflow across your revenue stack, so you can dream, deploy, and enjoy the breeze.
                 While the MRR just keeps rolling.</Box>
        </Container>
+<div className={styles.MiddleDiv}>
+<SubscriptionAutomation/>
+<BillingExperiments/>
+<RevenueIntelligence/>
+<ExtensiblePlatform/>
+<EnterpriseGradeSecurity/>
+</div>
+
+
 <Container className={styles.row5_box}>
        <Container className={styles.row5}>
                <Container className={styles.row5_1}>
@@ -65,6 +75,7 @@ const Home = ()=>{
                  </Container>
        </Container>
        </Container>
+       <TestiMonials/>
     </div>
 }
 export default Home;

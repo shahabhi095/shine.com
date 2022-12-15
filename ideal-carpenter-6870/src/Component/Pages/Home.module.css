@@ -50,3 +50,139 @@ border: 0px solid green;
     color: #64648c;
     width: 70%;
 }
+.element1{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10%;
+}
+.element1_ul_p ul{
+    padding-left: 0;
+}
+
+.element1_ul_p li{
+    list-style-type:none;
+    padding: 6px;
+    color: #64648c;
+    padding-left: 0;
+
+}
+.LearnMore{
+    color: #000ff0;
+    align-items: center;
+}
+.MiddleDiv{
+margin-left: 20%;
+margin-right: 9%;
+/* aspect-ratio: 3/1;
+    padding: 40px 0;
+    margin: auto;
+    border: solid black 2px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; */
+}
+.MiddleDiv>div{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.element1_p p{
+    color: #64648c;
+}
+.element1_h{
+    width: 100%;
+}
+.element1_img{
+    width: 100%;
+}
+.element1_img img{
+    width: 70%;
+}
+.B_Heading{
+    font-size: 44px;
+    color: white;
+}
+.TestiMonials{
+    background-color:#7625b9;
+}
+.B_Container{
+    margin-top: 12%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3%;
+}
+
+.B_Col1{
+    width: 100%;
+   margin: auto;
+   margin-left: 10%;
+}
+
+.B_Input{
+    width: 70%;
+    background-color:#181064;
+    border-radius: 25px;
+    padding: 5px;
+}
+.B_Input input{
+    padding: 10px;
+    padding-left: 20px;
+    width: 67%;
+    background-color: #181064;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    margin-right: 20px;
+    border-radius: 25px;
+}
+.B_Input button {
+    padding: 13px;
+    size: 120%;
+    background-color:#7f45ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+
+}
+
+
+
+.B_Col2{
+    width: 80%;
+    margin: auto;
+}
+.B_Col2_box{
+    margin-top: -14%;
+    margin-left: 10%;
+    padding: 4% 7% 4% 7%;
+    border-radius: 10px;
+    width: 50%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.B_Col2_Avatar>img{
+    border-radius: 50%;
+    width: 30%;
+}
+.B_Col2_Quotes{
+    margin-left: 80%;
+    margin-top: -17%;
+}
+._Col2_logo{
+    width: 80%;
+    margin: auto;
+}
+
+.B_Col2_logo li{
+    list-style-type: none;
+}
+.B_Col2_logo ul{
+    display: grid;
+    padding-left: 0;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.B_Col2_logo img{
+width: 70%;
+}
