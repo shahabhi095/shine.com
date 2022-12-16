@@ -1,11 +1,57 @@
-.Footer_Parrents Link{
-    list-style-type: none;
+.Footer_Child{
+    font-family: "IBM Plex Sans",
+        sans-serif;;
+   display: flex;
+    padding-left: 0;
+    color: #000000;
+    text-decoration: none; 
+    line-height: 23px;  
+}
+.Footer_Child_icon{
+    position: relative;
+    top: 3px;
+}
+/* .Footer_Child_icon_Hover{
+    display: none;
+    position: relative;
+}
+.Footer_header:hover .Footer_Child_icon_Hover{
+    display: block;
+ 
+}
+
+.Footer_header:hover .Footer_Child_icon {
+    display: none;
+} */
+.Footer_Child_h {
+  
     padding-left: 0;
     color: #000ff0;
     text-decoration: none;
 }
+.Footer_Parrents li{
+list-style-type: none;
+padding-bottom: 5px;
+padding-top: 5px;
+}
 
-.Footer_Parrents{
-    width: "90%";
-     margin:"auto";
+.Footer_Parrents {
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.Footer_Parrents ul {
+    padding-left: 0;
+}
+.Social_box_icon{
+   display: flex;
+   float: right;
+  transition-delay: .3S;
+   gap: 20px;
+}
+
+.Social{
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
