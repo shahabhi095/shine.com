@@ -126,7 +126,7 @@ margin-right: 9%;
 .B_Input input{
     padding: 10px;
     padding-left: 20px;
-    width: 67%;
+    width: 66%;
     background-color: #181064;
     color: white;
     border: none;
@@ -137,7 +137,6 @@ margin-right: 9%;
 }
 .B_Input button {
     padding: 13px;
-    size: 120%;
     background-color:#7f45ff;
     color: white;
     border: none;
