@@ -1,0 +1,150 @@
+.Top_Container{
+    background-color: #efeceb;
+    font-family: "IBM Plex Sans"-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
+        margin-top: -4%;
+        z-index: 100;
+}
+.AngleDiv{
+background-color:#7b305c;
+height: 500px;
+border-bottom-right-radius: 150px;
+border-bottom-left-radius: 50px;
+transform: rotate(-45deg);
+z-index: -1;
+}
+
+.Top_Container_main{
+    width: 43%;
+    margin: auto;
+    text-align: center;
+   padding-top: 15%;
+    padding-bottom: 4%;
+}
+.Top_Container_H{
+    font-size:100px;
+    color: #7b305c;
+    line-height: 66px;
+    font-weight: 700;
+}
+.Top_Container_p{
+    color: #7b305c;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.FaArrowRight{
+    display: none;
+   
+}
+
+/* .Btn1{
+transition: 1s;
+} */
+
+.Btn1:hover .FaArrowRight{
+    display: inline-flex;
+}
+.Btn1:hover .FaAngleRight {
+    display: none;
+}
+
+.ScalewithZeroTechDebt_cont{
+    width: 80%;  
+    margin: auto;
+   margin-top: 5%;
+   margin-bottom:20px;
+
+}
+
+.ScalewithZeroTechDebt_H{
+    margin-bottom: 3%;
+ 
+    margin-left: 5%;
+}
+.ScalewithZeroTechDebt_Grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+   padding-left: 30px;
+   margin: auto;
+   padding-bottom: 5%;
+}
+
+.ScalewithZeroTechDebt_Grid_div{
+    display: inline-flex;
+    gap: 10px;  
+    margin-left: 5%; 
+}
+.ScalewithZeroTechDebt_Grid_Img{
+background-color:#ffeef5; 
+border-radius: 40px;
+height: 35px;
+padding: 5px;
+align-items: center;
+}
+.ScalewithZeroTechDebt_Grid_p{
+    width: 70%;
+}
+
+.divider{
+    background-color: black;
+    height: 1px;
+
+}
+.MULTI_PRODUCT_MANAGEMENT_h5{
+    font-weight: 500;
+    background-color: #ffedce;
+    color: #935d00;
+    width: 63%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+}
+.MULTI_PRODUCT_MANAGEMENT_h6 {
+    font-weight: 500;
+    background-color: #ffedce;
+    color: #935d00;
+    width: 48%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+}
+
+.MULTI_PRODUCT_MANAGEMENT_Box_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    margin-left: 14%;
+    margin-top: 8%;
+    gap: 1%;
+}
+.MULTI_PRODUCT_MANAGEMENT_Box{
+    width: 80%;
+}
+.MULTI_PRODUCT_MANAGEMENT_img{
+    width: 90%;
+    height: 90%;
+}
+.MULTI_PRODUCT_MANAGEMENT_img>img{
+    width: 100%;
+    margin-right: 5%;
+    height: 100%;
+  
+}
+.MULTI_PRODUCT_MANAGEMENT_p{
+    color: #535363;
+    margin: 5% auto;
+}
+.MULTI_PRODUCT_MANAGEMENT_link1{
+    text-decoration: none;
+    color:#000ff0 ;
+    padding: 10px auto;
+    line-height: 40px;
+}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
    import {FaLinkedin} from "@react-icons/all-files/fa/FaLinkedin";
    import {FaTwitter} from "@react-icons/all-files/fa/FaTwitter";
       import {FaYoutube} from "@react-icons/all-files/fa/FaYoutube";
-
+import { FaArrowRight} from "@react-icons/all-files/fa/FaArrowRight";
 
 import styles from "./Footer.module.css"
 
@@ -17,7 +17,7 @@ export default function Footer(){
                     <div className="Footer_Child">
                         <h4 className={styles.Footer_header}>
                             <Link className={styles.Footer_Child_h} color="#000ff0" to="">Product </Link >{" "}<FaAngleRight className={styles.Footer_Child_icon} color="#000ff0"/>
-                            
+                            <FaArrowRight className={styles.Footer_Child_icon_Hover} color="#000ff0"/>
                         </h4>
                         <ul>
                             <li ><Link className={styles.Footer_Child} >Recurring Billing and Invoicing</Link></li>
@@ -30,8 +30,9 @@ export default function Footer(){
                         </ul>
                     </div>
                     <div className="Footer_Child">
-                        <h4 className="Footer_header">
+                        <h4  className={styles.Footer_header}>
                             <Link className={styles.Footer_Child_h} color="#000ff0" to="/features/">Help & Support</Link>{" "}<FaAngleRight className={styles.Footer_Child_icon} color="#000ff0"/>
+                        <FaArrowRight className={styles.Footer_Child_icon_Hover} color="#000ff0"/>
                         </h4>
                         <ul>
                             <li><Link className={styles.Footer_Child}>Security</Link></li>
@@ -43,8 +44,9 @@ export default function Footer(){
                             <li><Link className={styles.Footer_Child}>Sitemap</Link></li>
                         </ul>
                     </div>
-                    <div className="Footer_Child"><h4 className="Footer_header">
+                    <div className="Footer_Child"><h4  className={styles.Footer_header}>
                             <Link className={styles.Footer_Child_h} color="#000ff0" to="/features/">Resources</Link>{" "}<FaAngleRight className={styles.Footer_Child_icon} color="#000ff0"/>
+                        <FaArrowRight className={styles.Footer_Child_icon_Hover} color="#000ff0"/>
                         </h4>
                         <ul>
                             <li><Link className={styles.Footer_Child}>Blog</Link></li>
@@ -56,8 +58,9 @@ export default function Footer(){
                             <li><Link className={styles.Footer_Child}>Glossaries</Link></li>
                             <li><Link className={styles.Footer_Child}>Subscription Academy</Link></li>
                         </ul></div>
-                    <div className="Footer_Child"><h4 className="Footer_header">
+                    <div className="Footer_Child"><h4  className={styles.Footer_header}>
                             <Link className={styles.Footer_Child_h} color="#000ff0" to="/features/">Company</Link>{" "}<FaAngleRight className={styles.Footer_Child_icon} color="#000ff0"/>
+                        <FaArrowRight className={styles.Footer_Child_icon_Hover} color="#000ff0"/>
                         </h4>
                         <ul>
                             <li><Link className={styles.Footer_Child}>Customers</Link></li>
