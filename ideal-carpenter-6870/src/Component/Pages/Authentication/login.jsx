@@ -1,6 +1,6 @@
-
-import { useState, useContext } from "react";
- 
+import { useState, useEffect } from "react";
+import { Link , useNavigate } from "react-router-dom"
+ import styles from "./Auth.module.css"
 import {
   Flex,
   Heading,
@@ -11,117 +11,113 @@ import {
   InputLeftElement,
   chakra,
   Box,
-  Link,
   Avatar,
   FormControl,
   FormHelperText,
   InputRightElement
 } from "@chakra-ui/react";
 import { FaUserAlt, FaLock } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"
- import styles from  "../Pages/Authentication/Auth.module.css"
-
  
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
  
-const InitialData = {
-    name:"",
+const LoginCheck = {
     email: "",
     password: ""
 }
  
  
-const SignUp = () => {
+const LoginFunction = () => {
   const [Password, setPassword] = useState(false);
-  const Handleclick = () => setPassword(!Password);
+  const HandleClick = () => setPassword(!Password);
  
-  const [LoginData , setLoginData] = useState(InitialData);
+  const [ GetData , setGetData] = useState(LoginCheck);
+  const [ VerifyLoginData , setVerifyLoginData] = useState([])
  
-  const Navigate = useNavigate()
+ const Navigate = useNavigate()
+ 
+ useEffect(()=>{
+    CheckLoginDetails();
+ },[])
  
  
  
-   const HandleOnChange = (e)=>{
-    setLoginData({...LoginData,[e.target.name]:e.target.value})
+   const handleMyInput = (e)=>{
+    setGetData({...GetData,[e.target.name]:e.target.value})
    }
  
-   const HandleSubmit = (e)=>{
+   const hangleSubmitlogin = (e)=>{
        e.preventDefault();
-       console.log(LoginData)
-       LoginDataDetails(LoginData);
+ 
+       var flag = false;
+ 
+       VerifyLoginData.filter((el)=>{
+         if(el.email === GetData.email  &&  el.password === GetData.password){
+            flag = true;
+         }
        
-       setLoginData(InitialData)
-        return  Navigate("/gotologin")
-
+       })
+ 
+       if(flag){
+        console.log("done")
+         return  Navigate("/")
+       }
+       else{
+        setGetData(LoginCheck)
+        alert ("Wrong Credentials")
+       }
+ 
+       console.log(GetData);
+       
    }
  
-  const LoginDataDetails = async(LoginData)=>{
+ 
+  const CheckLoginDetails = async()=>{
     try{
-        let res = await fetch(`http://localhost:3000/LogIn`,{
-            method:"POST",
-            body:JSON.stringify(LoginData),
-            headers: {
-              "content-type":"application/json"
-            },
-          });
+        let res = await fetch(`http://localhost:3000/LogIn`);
           let data = await res.json();
-          console.log("Login Data" , data)
+          console.log("Fetch Login Data" , data);
+          setVerifyLoginData(data)  
     }
     catch(e){
         console.log(e)
     }
   }
  
- 
- 
- 
   return (
     <div className={styles.LoginContainer}>
     <Flex
       flexDirection="column"
       width="90wh"
-      height="50vh"
+      height="80vh"
       backgroundColor="gray.200"
       justifyContent="center"
       alignItems="center"
     >
       <Stack
-       className={styles.FormBox}
+      className={styles.FormBox}
         flexDir="column"
         mb="2"
         justifyContent="center"
         alignItems="center"
       >
         <Heading size={500} color="#181064">Welcome</Heading>
-        <Box minW={{ base: "90%", md: "468px" }}>
-          <form  onSubmit={HandleSubmit}  >
+        <Box minW={{ base: "90%", md: "550px" }}>
+          <form   onSubmit={hangleSubmitlogin}  >
             <Stack
               spacing={15}
               p="1rem"
               backgroundColor="whiteAlpha.900"
               boxShadow="md"
             >
-                 <FormControl>
-                <InputGroup>
-                  <InputLeftElement
-                    pointerEvents="none"
-                
-                  />
-                  <Input name="name" className={styles.FormControl} value={LoginData.name}  onChange={HandleOnChange}    type="text" placeholder="Full Name" />
-                </InputGroup>
-              </FormControl>
- 
- 
- 
- 
+               
               <FormControl>
                 <InputGroup>
                   <InputLeftElement
                     pointerEvents="none"
                    
                   />
-                  <Input name="email" className={styles.FormControl}  value={LoginData.email}  onChange={HandleOnChange}    type="email" placeholder="email address" />
+                  <Input className={styles.FormControl} name="email"  value={GetData.email}  onChange={handleMyInput}    type="email" placeholder="email address" />
                 </InputGroup>
               </FormControl>
               <FormControl>
@@ -129,15 +125,15 @@ const SignUp = () => {
                   <InputLeftElement
                     pointerEvents="none"
                     color="gray.300"
-                
+                   
                   />
                   <Input
-                    name="password" className={styles.FormControl}   value={LoginData.password}  onChange={HandleOnChange}
+                    name="password" className={styles.FormControl}  value={GetData.password}  onChange={handleMyInput}
                     type={Password ? "text" : "password"}
                     placeholder="Password"
                   />
                   <InputRightElement width="4.5rem">
-                    <Button h="1.75rem" size="sm" color={"white"} bg={"#000ff0"}  onClick={Handleclick}>
+                    <Button h="1.75rem" size="sm" color={"white"} bg={"#000ff0"} onClick={HandleClick}>
                       {Password ? "Hide" : "Show"}
                     </Button>
                   </InputRightElement>
@@ -147,28 +143,22 @@ const SignUp = () => {
                 </FormHelperText>
               </FormControl>
               <Button
-              color={"white"} bg={"#000ff0"} 
+              color={"white"} bg={"#000ff0"}
                 borderRadius={0}
                 type="submit"
                 variant="solid"
                 colorScheme="pink"
                 width="full"
               >
-                Sign Up
+                Login
               </Button>
             </Stack>
           </form>
         </Box>
       </Stack>
-      <Box>
-      Already a user?{" "}
-        <Link color="blue" href="/gotologin">
-         Login
-        </Link>
-      </Box>
     </Flex>
     </div>
   );
 };
  
-export default SignUp;
+export default LoginFunction;

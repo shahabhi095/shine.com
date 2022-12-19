@@ -1,9 +1,27 @@
 {
-  "posts": [
+  "login": [
     {
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "name": "Abhinandan Kumar",
+      "email": "shahabhi095@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "name": "Abhinandan Kumar",
+      "email": "shahabhi095@gmail.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "name": "Abhinandan Kumar",
+      "email": "shahabhi095@gmail.com",
+      "password": "1234",
+      "id": 4
     }
   ],
   "comments": [

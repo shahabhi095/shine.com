@@ -36,7 +36,7 @@ const styles={
        </div>
         <div className="navbar_right">
             <NavLink style={styles} to={"/language"}> <div>Language</div></NavLink>
-            <NavLink style={styles} to={"/login"}>   <div>Login </div></NavLink>
+            <NavLink style={styles} to={"/login"}>   <div>Login</div></NavLink>
             <NavLink style={styles} to={"/demo"}> <div>Demo</div></NavLink>
         </div>
     </div>
