@@ -37,7 +37,7 @@ const Product = ()=>{
     <div className={styles.Top_Container}>
         <div className={styles.Top_Container_main}>
             <div className={styles.Top_Container_H}>
-               <h1 as='h1' size='4xl' color="#7b305c">Go to Market FasterWith a Scalable Plan& Product Catalog</h1> 
+               <h1 as='h1' size='4xl' color="#7b305c">Go to Market Faster With a Scalable Plan & Product Catalog</h1> 
             </div>
             <div  className={styles.Top_Container_p}>
                   <p fontSize='2xl' color="#7b305c">Model your plan catalog in the most efficient way, and give yourself the biggest competitive advantage ever - time.</p>

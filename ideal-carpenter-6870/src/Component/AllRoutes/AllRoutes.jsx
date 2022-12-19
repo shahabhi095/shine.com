@@ -11,6 +11,7 @@ import Partenr from "../Pages/partner"
 import Language from "../Pages/Language"
 import Login from "../Pages/Login"
 import Demo from "../Pages/Demo"
+import LoginFunction from "../Pages/Authentication/login"
 
 const AllRoutes=()=>{
     return <Routes>
@@ -24,6 +25,7 @@ const AllRoutes=()=>{
 <Route path="/language" element={<Language/>}></Route>
 <Route path="/login" element={<Login/>}></Route>
 <Route path="/demo" element={<Demo/>}></Route>
+<Route path="/gotologin" element={<LoginFunction/>}></Route>
 
     </Routes>
 }

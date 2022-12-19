@@ -1,12 +1,11 @@
 import { TestiMonials } from "./Containt_home";
-
+import SignUp from "./SignUp";
 
 import React from "react";
-import SignupCard from "./SignUp"
+
 const Login = ()=>{
     return <div>
-    <h1>Login</h1>
-    <SignupCard/>
+   <div> <SignUp/></div>
     <TestiMonials />;
     </div>
 }
