@@ -1,9 +1,13 @@
+import { TestiMonials } from "./Containt_home";
+
+
 import React from "react";
-import SignUp from "./SignUp"
+import SignupCard from "./SignUp"
 const Login = ()=>{
     return <div>
     <h1>Login</h1>
-    <SignUp/>
+    <SignupCard/>
+    <TestiMonials />;
     </div>
 }
 export default Login;

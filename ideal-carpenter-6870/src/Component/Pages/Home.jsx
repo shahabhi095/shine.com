@@ -1,12 +1,15 @@
 import React from "react";
 import { Container2,SubscriptionAutomation,BillingExperiments,RevenueIntelligence,ExtensiblePlatform,EnterpriseGradeSecurity } from "./Containt_home";
-import { Grid, GridItem,Box,Image,Heading ,Container } from '@chakra-ui/react'
+import { Grid, GridItem,Box,Image,Heading ,Container, Tabs,TabList,Tab,TabPanels,TabPanel} from '@chakra-ui/react'
 import  styles  from "./Home.module.css";
   import { FaArrowRight} from "@react-icons/all-files/fa/FaArrowRight";
 import { TestiMonials } from "./Containt_home";
+import UncontrolledExample from "./MainPageSmoothScroll"
 
 const Home = ()=>{
     return <div>
+
+      <UncontrolledExample/>
    
         <div className="container2" style={{border:"0px solid blue",paddingBottom:"6%", paddingTop:"6%", display:"flex",paddingLeft:"15px",paddingRight:"15px", marginLeft: "78px",  marginRight: "78px"}}>
             <div className="row" style={{border:"0px solid yellow", width:"30%",padding:"20px"}}>
@@ -36,8 +39,39 @@ const Home = ()=>{
                 While the MRR just keeps rolling.</Box>
        </Container>
 <div className={styles.MiddleDiv}>
-<SubscriptionAutomation/>
+    <Tabs>
+  <TabList>
+    <Tab>Subscription Automation</Tab>
+    <Tab>Billing Experiments</Tab>
+    <Tab>Revenue Intelligence</Tab>
+    <Tab>Extensible Platform</Tab>
+    <Tab>EnterpriseGradeSecurity</Tab>
+  </TabList>
+
+  <TabPanels>
+    <TabPanel>
+     <SubscriptionAutomation/>
+    </TabPanel>
+    
+    <TabPanel>
+      <BillingExperiments/>
+    </TabPanel>
+    <TabPanel>
+  <RevenueIntelligence/>
+    </TabPanel>
+    <TabPanel>
+  <ExtensiblePlatform/>
+    </TabPanel>
+    <TabPanel>
+     <EnterpriseGradeSecurity/>
+    </TabPanel>
+  </TabPanels>
+</Tabs>
+
+{/* <SubscriptionAutomation/> */}
+ <BillingExperiments/>
 <BillingExperiments/>
+
 <RevenueIntelligence/>
 <ExtensiblePlatform/>
 <EnterpriseGradeSecurity/>

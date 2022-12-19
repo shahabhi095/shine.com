@@ -1,0 +1,29 @@
+
+.Carousel_Grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f4eefa;
+    gap: 10%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8%;
+}
+.Carousel_Caption_h3{
+    color: black;
+}
+.Carousel_Caption_p {
+    color: #535363;
+}
+.Carousel_Caption{
+width: 50%;
+text-align: left;
+margin-left: -5%;
+}
+.Carousel_Img_Box{
+    text-align: center;
+    float: right;
+    margin-left: 20%;
+}
+.carousel-control-prev{
+    color: black;
+}

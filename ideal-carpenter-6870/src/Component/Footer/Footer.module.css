@@ -9,20 +9,20 @@
 }
 .Footer_Child_icon{
     position: relative;
-    top: 3px;
+    top: 0px;
 }
-/* .Footer_Child_icon_Hover{
+.Footer_Child_icon_Hover{
     display: none;
     position: relative;
 }
 .Footer_header:hover .Footer_Child_icon_Hover{
-    display: block;
+    display: inline-flex;
  
 }
 
 .Footer_header:hover .Footer_Child_icon {
     display: none;
-} */
+}
 .Footer_Child_h {
   
     padding-left: 0;

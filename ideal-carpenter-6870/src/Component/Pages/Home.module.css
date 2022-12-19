@@ -1,14 +1,14 @@
 .row5_box{
     width: 70%;
-        margin-left: 20%;
+        margin-left: 22%;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
        border-radius:20px;
 }
 
 .row5{
-    width: 114%;
+    width: 116%;
     margin-top: 5%;
-    margin-left: -19%;
+    margin-left: -20%;
     display: flex;
     grid-template-columns: repeat(2, 1fr);
     gap: 4%;
@@ -112,16 +112,16 @@ margin-right: 9%;
 }
 
 .B_Col1{
-    width: 100%;
+    width: 90%;
    margin: auto;
    margin-left: 10%;
 }
 
 .B_Input{
-    width: 70%;
+    width: 80%;
     background-color:#181064;
     border-radius: 25px;
-    padding: 5px;
+    padding: 3px;
 }
 .B_Input input{
     padding: 10px;
@@ -136,41 +136,45 @@ margin-right: 9%;
     border-radius: 25px;
 }
 .B_Input button {
-    padding: 13px;
+    padding: 15px;
     background-color:#7f45ff;
     color: white;
     border: none;
     border-radius: 25px;
     font-weight: 700;
+    margin-left: 3%;
 
 }
 
 
 
 .B_Col2{
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 .B_Col2_box{
-    margin-top: -14%;
+    margin-top: -18%;
     margin-left: 10%;
-    padding: 4% 7% 4% 7%;
+    padding: 7% 7% 5% 7%;
     border-radius: 10px;
-    width: 50%;
+    width: 65%;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .B_Col2_Avatar>img{
     border-radius: 50%;
-    width: 30%;
+    width: 35%;
+    margin: 5% auto 5% auto;
+    
 }
 .B_Col2_Quotes{
     margin-left: 80%;
-    margin-top: -17%;
+    margin-top: -22%;
 }
 ._Col2_logo{
     width: 80%;
     margin: auto;
+    margin-top: 5%;
 }
 
 .B_Col2_logo li{
