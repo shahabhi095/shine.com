@@ -1,3 +1,24 @@
+### Original Website Name: Chargebee.com
+https://www.chargebee.com/
+
+## I named this GROW MORE A Business Solution
+### Here is Logo 
+<img src="GrowMore.png">
+D:\Masai School\Program Files\web development\unit-4\Unit-4-CWP\ideal-carpenter-6870\src\Component\Navbar\GrowMore.png
+
+### Tech Stack
+HTML
+CSS
+Advance JavaScript
+React Js
+ChakraUi
+Bootstrap
+
+## Render is used for API
+
+### Deployed on Netlify
+
+### Some the Component Present In the Website
 
 ### Navbar
  logo
