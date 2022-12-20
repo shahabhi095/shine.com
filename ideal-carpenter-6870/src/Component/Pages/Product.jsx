@@ -7,7 +7,7 @@ import { FaSitemap} from "@react-icons/all-files/fa/FaSitemap";
  import { FaChartBar} from "@react-icons/all-files/fa/FaChartBar";
 import { FaRegClock} from "@react-icons/all-files/fa/FaRegClock";
  import { FaRegFileAlt} from "@react-icons/all-files/fa/FaRegFileAlt";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const Btnstyles={
 backgroundColor:"#ce6f80",
@@ -20,10 +20,20 @@ margin:"3%"
 
 
 export const GetaDemoButton=()=>{
+    const Navigate = useNavigate()
+
+const handleClickSignup=()=>{
+    return Navigate("/login")
+}
+
+const handleClickDemo=()=>{
+    return Navigate("/demo")
+}
+
 return<div>
 <div >
-    <button className={styles.Btn1}  style={Btnstyles}><b> Get a Demo </b>{" "}<FaAngleRight  className={styles.FaAngleRight} color="white"/>< FaArrowRight className={styles.FaArrowRight}/></button>
-    <button className={styles.Btn1}  style={{...Btnstyles,backgroundColor:"#efeceb", color:"#7b305c"}}><b>Sign up for free</b>{" "}<FaAngleRight className={styles.FaAngleRight} color="#7b305c"/>< FaArrowRight color="#7b305c" className={styles.FaArrowRight}/></button>
+    <button onClick={handleClickDemo} className={styles.Btn1}  style={Btnstyles}><b> Get a Demo </b>{" "}<FaAngleRight  className={styles.FaAngleRight} color="white"/>< FaArrowRight className={styles.FaArrowRight}/></button>
+    <button onClick={handleClickSignup}  className={styles.Btn1}  style={{...Btnstyles,backgroundColor:"#efeceb", color:"#7b305c"}}><b>Sign up for free</b>{" "}<FaAngleRight className={styles.FaAngleRight} color="#7b305c"/>< FaArrowRight color="#7b305c" className={styles.FaArrowRight}/></button>
 </div>
 
 </div>

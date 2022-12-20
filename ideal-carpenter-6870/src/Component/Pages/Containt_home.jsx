@@ -4,6 +4,10 @@
   import { FaArrowRight} from "@react-icons/all-files/fa/FaArrowRight";
   import { FaQuoteRight} from "@react-icons/all-files/fa/FaQuoteRight";
   import { Link,Button } from "@chakra-ui/react";
+  import { AuthContext } from "../AuthContext/AuthContext";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
  
   const Container2=()=>{
     return [
@@ -126,12 +130,20 @@ return (<div className="Enterprise-GradeSecurity">
 }
 
     const TestiMonials=()=>{
+const {getemail} = useContext(AuthContext)
+const Navigate = useNavigate()
+
+const handleClickDemo=()=>{
+    return Navigate("/demo")
+}
+
+
         return (
         <div  className={styles.TestiMonials}>
             <div className={styles.B_Container}>
                 <div className={styles.B_Col1}>
                     <div> <h1 className={styles.B_Heading}>Get a Demo Customized to Your Subscription Workflow</h1></div>
-                    <div className={styles.B_Input}><form action=""><input type="email"/><Button colorScheme='#7f45ff'>Get a Demo</Button></form></div>
+                    <div className={styles.B_Input}><form action=""><input defaultValue={getemail} type="email"/><Button onClick={handleClickDemo} colorScheme='#7f45ff'>Get a Demo</Button ></form></div>
                 </div>
                 <div className={styles.B_Col2}>
                     <div className={styles.B_Col2_box}>

@@ -1,5 +1,5 @@
 
-import { useState, useContext } from "react";
+import { useState } from "react";
  
 import {
   Flex,
@@ -28,6 +28,7 @@ const CFaLock = chakra(FaLock);
 const InitialData = {
     name:"",
     email: "",
+    phone:"",
     password: ""
 }
  
@@ -58,7 +59,7 @@ const SignUp = () => {
  
   const LoginDataDetails = async(LoginData)=>{
     try{
-        let res = await fetch(`http://localhost:3000/LogIn`,{
+        let res = await fetch(`https://abhinandan.onrender.com/login`,{
             method:"POST",
             body:JSON.stringify(LoginData),
             headers: {
@@ -124,6 +125,16 @@ const SignUp = () => {
                   <Input name="email" className={styles.FormControl}  value={LoginData.email}  onChange={HandleOnChange}    type="email" placeholder="email address" />
                 </InputGroup>
               </FormControl>
+                <FormControl>
+                <InputGroup>
+                  <InputLeftElement
+                    pointerEvents="none"
+                   
+                  />
+                  <Input name="phone" className={styles.FormControl}  value={LoginData.phone}  onChange={HandleOnChange}    type="text" placeholder="Phone Number" />
+                </InputGroup>
+              </FormControl>
+
               <FormControl>
                 <InputGroup>
                   <InputLeftElement
