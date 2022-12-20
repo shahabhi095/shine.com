@@ -17,6 +17,8 @@ import {
   InputRightElement
 } from "@chakra-ui/react";
 import { FaUserAlt, FaLock } from "react-icons/fa";
+import { AuthContext } from "../../AuthContext/AuthContext";
+import { useContext } from "react";
  
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
@@ -33,6 +35,8 @@ const LoginFunction = () => {
  
   const [ GetData , setGetData] = useState(LoginCheck);
   const [ VerifyLoginData , setVerifyLoginData] = useState([])
+
+  const {getEmail} = useContext(AuthContext)
  
  const Navigate = useNavigate()
  
@@ -50,16 +54,17 @@ const LoginFunction = () => {
        e.preventDefault();
  
        var flag = false;
- 
+       
        VerifyLoginData.filter((el)=>{
          if(el.email === GetData.email  &&  el.password === GetData.password){
             flag = true;
          }
-       
+      
        })
  
        if(flag){
-        console.log("done")
+         getEmail(GetData.email)
+        
          return  Navigate("/")
        }
        else{
@@ -70,11 +75,11 @@ const LoginFunction = () => {
        console.log(GetData);
        
    }
- 
+
  
   const CheckLoginDetails = async()=>{
     try{
-        let res = await fetch(`http://localhost:3000/LogIn`);
+        let res = await fetch(`https://abhinandan.onrender.com/login`);
           let data = await res.json();
           console.log("Fetch Login Data" , data);
           setVerifyLoginData(data)  
